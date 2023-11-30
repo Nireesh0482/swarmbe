@@ -1,0 +1,57 @@
+{
+  "name": "audit_tool_prom_tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "dev-inspect": "node --inspect server.js",
+    "start": "node server.js",
+    "pm2": "pm2 start ./pm2.json",
+    "lint": "npx eslint **/app/**/*.js",
+    "lint:fix": "eslint --fix ./*.js"
+  },
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.28.0",
+    "dayjs": "^1.10.7",
+    "dotenv": "^16.0.1",
+    "exceljs": "^4.3.0",
+    "express": "^4.17.1",
+    "express-pino-logger": "^7.0.0",
+    "ics": "^2.35.0",
+    "joi": "^17.4.2",
+    "joi-password": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^3.2.0",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.6.5",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "pino": "^7.2.0",
+    "pino-pretty": "^7.2.0",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.7.1",
+    "swagger-ui-express": "^4.3.0"
+  }
+}

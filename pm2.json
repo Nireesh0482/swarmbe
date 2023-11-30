@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "script": "server.js",
+      "instances": "1",
+      "exec_mode": "cluster",
+      "name": "primary",
+      "restart_delay": 3000,
+      "wait_ready": true,
+      "listen_timeout": 10000,
+      " max_memory_restart": "300M",
+      "env_production": {
+        "name": "production-primary",
+        "NOVE_ENV": "production"
+      },
+      "env_development": {
+        "name": "production-primary",
+        "NOVE_ENV": "production"
+      }
+    },
+    {
+      "script": "server.js",
+      "instances": "-1",
+      "exec_mode": "cluster",
+      "name": "replica",
+      "wait_ready": true,
+      "listen_timeout": 10000,
+      "restart_delay": 3000,
+      "max_memory_restart": "300M",
+      "env_production": {
+        "name": "production-primary",
+        "NOVE_ENV": "production"
+      },
+      "env_development": {
+        "name": "development-replica",
+        "NOVE_ENV": "development"
+      }
+    }
+  ]
+}

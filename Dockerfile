@@ -12,7 +12,6 @@ RUN npm ci --only=development
 
 # Copy the rest of the application code to the container
 COPY . . 
-COPY /var/lib/jenkins/.env .
 
 # Expose the port that your Node.js application listens on
 EXPOSE 2000
